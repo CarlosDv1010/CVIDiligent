@@ -1,0 +1,1 @@
+Cada ejemplo suele tener una carpeta de ejecutable (el .exe que está adentro tiene ya el proyecto para correrlo) y algunas carpetas que deben ponerse en las rutas correspondientes dentro de diligent engine. Se organizan como si la carpeta de build del motor se llamara "build" y como si se ejecutara todo desde Windows.
