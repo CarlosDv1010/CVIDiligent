@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Common\src\TexturedCube.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\src\Prism.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Tutorial04_Instancing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Common\src\TexturedCube.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\src\Prism.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial04_Instancing\readme.md" />
+    <ClInclude Include="Tutorial04_Instancing.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial04_Instancing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\DGLogo.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap0.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap2.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap5.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap7.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\blendMap13.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\path0.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\path2.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\path5.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\path7.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\path13.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\grassFlowers5.png">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\cube_inst.vsh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\cube_inst.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\prism_inst.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\..\..\..\..\DiligentSamples\Tutorials\Tutorial04_Instancing\assets\prism_inst.vsh">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{68CC53E4-D06D-3E4E-B166-88B0E4DE1527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{58333B0E-C368-313C-A030-55580C043181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{5CB25561-53A5-3AD1-A67B-D5BDC9279206}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
