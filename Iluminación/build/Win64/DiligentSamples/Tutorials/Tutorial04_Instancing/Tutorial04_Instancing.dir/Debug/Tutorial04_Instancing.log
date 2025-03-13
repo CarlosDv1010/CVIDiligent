@@ -1,0 +1,5 @@
+﻿  Tutorial04_Instancing.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.42.34433\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\carlo\Desktop\DiligentEngine\build\Win64\DiligentSamples\Tutorials\Tutorial04_Instancing\Tutorial04_Instancing.cpp(486,38): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\carlo\Desktop\DiligentEngine\build\Win64\DiligentSamples\Tutorials\Tutorial04_Instancing\Tutorial04_Instancing.cpp(688,10): warning C4189: 'SrfPreTransform2': local variable is initialized but not referenced
+  Tutorial04_Instancing.vcxproj -> C:\Users\carlo\Desktop\DiligentEngine\build\Win64\DiligentSamples\Tutorials\Tutorial04_Instancing\Debug\Tutorial04_Instancing.exe
