@@ -1,0 +1,95 @@
+// Declaraciones de las texturas y samplers para las texturas base.
+Texture2DArray g_BlendMap;
+SamplerState g_BlendMap_sampler;
+
+Texture2DArray g_BackgroundTexture;
+SamplerState g_BackgroundTexture_sampler;
+
+Texture2DArray g_RTexture;
+SamplerState g_RTexture_sampler;
+
+Texture2DArray g_GTexture;
+SamplerState g_GTexture_sampler;
+
+Texture2DArray g_BTexture;
+SamplerState g_BTexture_sampler;
+
+// Declaración de la textura del shadow map y su sampler de comparación.
+Texture2D g_ShadowMap;
+SamplerComparisonState g_ShadowMap_sampler; // Debe ser bindeado con un sampler de comparación
+
+// CBuffer de iluminación principal.
+cbuffer Constants
+{
+    float3 lightPositionWorld;
+    float3 eyePositionWorld;
+    float4 ambientLight;
+    float4 g_LightDirection;
+    float4 specMask;
+    float specularPower;
+};
+
+struct PSInput
+{
+    float4 Pos : SV_POSITION;
+    float2 UV : TEX_COORD;
+    float TexIndex : TEX_ARRAY_INDEX;
+    float3 WorldPos : POSITION0;
+    float3 Normal : NORMAL;
+    float4 ShadowMapPos : TEXCOORD3;
+};
+
+struct PSOutput
+{
+    float4 Color : SV_TARGET;
+};
+
+void main(in PSInput PSIn, out PSOutput PSOut)
+{
+    // --- Muestreo del Shadow Map ---
+    // SampleCmp compara PSIn.ShadowMapPos.z (la profundidad transformada) con el valor almacenado.
+    // Se utiliza max(PSIn.ShadowMapPos.z, 1e-7) para evitar divisiones por cero.
+    float LightAmount = g_ShadowMap.SampleCmp(g_ShadowMap_sampler, PSIn.ShadowMapPos.xy, max(PSIn.ShadowMapPos.z, 1e-7));
+
+    // --- Cálculo de NdotL ---
+    // Se utiliza un vector fijo (por ejemplo, (0,1,0)) para simular la normal de un plano.
+    // Esto es similar al ejemplo de visualización del shadow map.
+    float NdotL = saturate(dot(float3(0.0, 1.0, 0.0), -g_LightDirection.xyz));
+
+    // --- Mezcla de Texturas (dummy, se usan para evitar errores) ---
+    float3 texCoord = float3(PSIn.UV, PSIn.TexIndex);
+    float blendMultiplier = 1.5;
+    float4 blendMapColour = saturate(g_BlendMap.Sample(g_BlendMap_sampler, texCoord) * blendMultiplier);
+    float backTextureAmount = 1.0 - (blendMapColour.r + blendMapColour.g + blendMapColour.b);
+    
+    float4 backgroundTextureColour = g_BackgroundTexture.Sample(g_BackgroundTexture_sampler, texCoord) * backTextureAmount;
+    float4 rTextureColour = g_RTexture.Sample(g_RTexture_sampler, texCoord) * blendMapColour.r;
+    float4 gTextureColour = g_GTexture.Sample(g_GTexture_sampler, texCoord) * blendMapColour.g;
+    float4 bTextureColour = g_BTexture.Sample(g_BTexture_sampler, texCoord) * blendMapColour.b;
+    float4 textureColour = (backgroundTextureColour + rTextureColour + gTextureColour + bTextureColour) * 0.0001;
+
+    // --- Iluminación Difusa ---
+    float intensityFactor = 2.0;
+    float3 lightDir = normalize(lightPositionWorld - PSIn.WorldPos);
+    float3 norm = normalize(PSIn.Normal);
+    float brightness = saturate(dot(lightDir, norm)) * intensityFactor;
+    float4 diffuseLight = float4(brightness, brightness, brightness, 1.0);
+
+    // --- Iluminación Especular (modelo simplificado Blinn–Phong) ---
+    float3 reflectedLight = reflect(-lightDir, norm);
+    float3 viewDir = normalize(eyePositionWorld - PSIn.WorldPos);
+    float spec = saturate(dot(reflectedLight, viewDir)) * intensityFactor;
+    spec = pow(spec, specularPower);
+    float4 specularLight = float4(0, 0, spec, 1.0);
+
+    // --- Modulación de la iluminación con la sombra ---
+    // Se utiliza un factor combinado similar al ejemplo: (NdotL * LightAmount * 0.8 + 0.2).
+    float shadowModulation = NdotL * LightAmount * 0.8 + 0.2;
+
+    // --- Combinación final ---
+    // Se suma la luz ambiental a la iluminación modulada por sombra y se añade la mezcla dummy de texturas.
+    float4 finalColor = ambientLight + (diffuseLight + specularLight) * shadowModulation + textureColour;
+    finalColor = clamp(finalColor, 0.0, 1.0);
+
+    PSOut.Color = finalColor;
+}
