@@ -1,0 +1,10 @@
+^C:\USERS\CARLO\DESKTOP\DILIGENTENGINE\DILIGENTSAMPLES\TUTORIALS\TUTORIAL21_RAYTRACING\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/Desktop/DiligentEngine -BC:/Users/carlo/Desktop/DiligentEngine/build/Win64 --check-stamp-file C:/Users/carlo/Desktop/DiligentEngine/build/Win64/DiligentSamples/Tutorials/Tutorial21_RayTracing/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
