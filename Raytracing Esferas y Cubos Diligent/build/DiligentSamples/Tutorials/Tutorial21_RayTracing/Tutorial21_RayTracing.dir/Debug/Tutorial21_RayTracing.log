@@ -1,0 +1,10 @@
+﻿  Tutorial21_RayTracing.cpp
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(536,22): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(550,20): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(563,22): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(577,20): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(590,22): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(653,20): warning C4127: conditional expression is constant
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(1030,17): warning C4189: 'MaxIndexOfRefraction': local variable is initialized but not referenced
+C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp(1031,17): warning C4189: 'MaxDispersion': local variable is initialized but not referenced
+  Tutorial21_RayTracing.vcxproj -> C:\Users\carlo\Desktop\DiligentEngine\build\Win64\DiligentSamples\Tutorials\Tutorial21_RayTracing\Debug\Tutorial21_RayTracing.exe

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\src\Tutorial21_RayTracing.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo0.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo1.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo2.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\DGLogo3.png">
+      <Filter>assets</Filter>
+    </Image>
+    <Image Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.jpg">
+      <Filter>assets</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\structures.fxh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayUtils.fxh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\CubePrimaryHit.rchit">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\GlassPrimaryHit.rchit">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SpherePrimaryHit.rchit">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\SphereIntersection.rint">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\Ground.rchit">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\RayTrace.rgen">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\PrimaryMiss.rmiss">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ShadowMiss.rmiss">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.psh">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\Tutorials\Tutorial21_RayTracing\assets\ImageBlit.vsh">
+      <Filter>assets</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C:\Users\carlo\Desktop\DiligentEngine\DiligentSamples\SampleBase\src\Win32\resources\Win32AppResource.rc">
+      <Filter>resources</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="assets">
+      <UniqueIdentifier>{68CC53E4-D06D-3E4E-B166-88B0E4DE1527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resources">
+      <UniqueIdentifier>{58333B0E-C368-313C-A030-55580C043181}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{5CB25561-53A5-3AD1-A67B-D5BDC9279206}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
